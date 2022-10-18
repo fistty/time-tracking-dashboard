@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: rgb(88, 71, 235);
+  --Light-red-work: rgb(255, 140, 102);
+  --Soft-blue-play: rgb(86, 194, 230);
+  --Light-red-study: rgb(255, 92, 124);
+  --Lime-green-exercise: rgb(74, 207, 129);
+  --Violet-social: rgb(117, 54, 211);
+  --Soft-orange-self-care: rgb(241, 198, 91);
+
+  --Very-dark-blue: rgb(15, 20, 36);
+  --Dark-blue: hsl(236, 45%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: rgb(189, 193, 255);
+  --Rubik: "Rubik", sans-serif;
+}
+
+/*-----------------------------------*\
+     ATTRIBUTION
+/*-----------------------------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*-----------------------------------*\
+     BODY
+/*-----------------------------------*/
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  padding-top: 5.0625rem;
+  padding-bottom: 5.0625rem;
+  background-color: var(--Very-dark-blue);
+  color: white;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*-----------------------------------*\
+     HEADER
+/*-----------------------------------*/
+header {
+  background-color: var(--Dark-blue);
+  width: calc(100% - 3rem);
+  border-radius: 0.75rem;
+}
+
+/*-----------------------------------*\
+     PROFILE CONTAINER
+/*-----------------------------------*/
+.profile-container {
+  background-color: var(--Blue);
+  padding-top: 1.9375rem;
+  padding-left: 1.8125rem;
+  padding-bottom: 1.9375rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+}
+
+.profile-img-container img {
+  width: 4.375rem;
+  height: 4.375rem;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+/*-----------------------------------*\
+     TEXT CONTAINER
+/*-----------------------------------*/
+.profile-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5625rem;
+}
+
+h1 {
+  font-size: 1.5625rem;
+  font-weight: 300;
+}
+
+.profile-p {
+  color: var(--Pale-Blue);
+  font-size: 1rem;
+}
+
+/*-----------------------------------*\
+     PERIOD CONTAINER
+/*-----------------------------------*/
+.period-container {
+  padding-left: 2.1875rem;
+  padding-right: 1.375rem;
+  padding-block: 1.5625rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.period-container > button {
+  background-color: transparent;
+  color: var(--Pale-Blue);
+  border: none;
+  font-family: var(--Rubik);
+  font-size: 1.1875rem;
+  transition: all 50ms ease-out, transform 100ms ease-out;
+}
+
+.period-container > button.active {
+  color: rgb(240 253 255);
+  transform: scale(1.2);
+}
+
+/*-----------------------------------*\
+     MAIN
+/*-----------------------------------*/
+main {
+  width: 100%;
+}
+
+.time-card {
+  background-color: var(--Light-red-work);
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  position: relative;
+  border-radius: 0.875rem;
+  overflow: hidden;
+}
+
+.time-card.work {
+  background-color: var(--Light-red-work);
+}
+
+.time-card.play {
+  background-color: var(--Soft-blue-play);
+}
+
+.time-card.exercise {
+  background-color: var(--Lime-green-exercise);
+}
+
+.time-card.social {
+  background-color: var(--Violet-social);
+}
+
+.time-card.study {
+  background-color: var(--Light-red-study);
+}
+
+.time-card.self-care {
+  background-color: var(--Soft-orange-self-care);
+}
+
+.card-svg {
+  position: absolute;
+  top: -0.75rem;
+  right: 1.125rem;
+  display: block;
+}
+
+.info-container {
+  position: relative;
+  background-color: var(--Dark-blue);
+  padding-inline: 1.5625rem 1.5rem;
+  margin-top: 2.375rem;
+  border-radius: 0.875rem;
+  z-index: 9;
+  padding-top: 1.9375rem;
+  padding-bottom: 1.875rem;
+}
+
+.title-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.timeframe-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeframe-curr {
+  font-size: 1.875rem;
+  font-weight: 300;
+}
+
+.timeframe-prev {
+  color: var(--Pale-Blue);
+}
