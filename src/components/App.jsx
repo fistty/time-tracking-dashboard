@@ -4,6 +4,7 @@ import "./App.css";
 import DailyCard from "./DailyCard";
 import WeeklyCard from "./WeeklyCard";
 import MonthlyCard from "./MonthlyCard";
+import getSvg from "../getSvg";
 
 function App() {
   const [active, setActive] = useState({
@@ -34,9 +35,9 @@ function App() {
         monthly={monthly}
       />
       <main>
-        {daily ? <DailyCard /> : null}
-        {weekly ? <WeeklyCard /> : null}
-        {monthly ? <MonthlyCard /> : null}
+        {daily ? <DailyCard getSvg={getSvg} /> : null}
+        {weekly ? <WeeklyCard getSvg={getSvg} /> : null}
+        {monthly ? <MonthlyCard getSvg={getSvg} /> : null}
       </main>
     </>
   );
