@@ -127,12 +127,16 @@ h1 {
   border: none;
   font-family: var(--Rubik);
   font-size: 1.1875rem;
-  transition: all 50ms ease-out, transform 100ms ease-out;
+  transition: all 50ms ease-out, transform 100ms ease-out, color 200ms ease-out;
 }
 
 .period-container > button.active {
   color: rgb(240 253 255);
   transform: scale(1.2);
+}
+
+.period-container > button:hover {
+  color: rgb(240 253 255);
 }
 
 /*-----------------------------------*\
@@ -150,6 +154,16 @@ main {
   position: relative;
   border-radius: 0.875rem;
   overflow: hidden;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+
+.time-card:hover > .info-container {
+  background-color: rgb(52 57 123);
+}
+
+.time-card:hover > .card-svg {
+  transform: rotateZ(-45deg);
 }
 
 .time-card.work {
@@ -181,6 +195,7 @@ main {
   top: -0.75rem;
   right: 1.125rem;
   display: block;
+  transition: all 150ms ease-out;
 }
 
 .info-container {
@@ -192,6 +207,7 @@ main {
   z-index: 9;
   padding-top: 1.9375rem;
   padding-bottom: 1.875rem;
+  transition: all 200ms ease-out;
 }
 
 .title-container {
@@ -199,6 +215,19 @@ main {
   align-items: baseline;
   justify-content: space-between;
   font-weight: 500;
+}
+
+.elipsis {
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+
+.elipsis > path {
+  transition: all 200ms ease-out;
+}
+
+.elipsis:hover > path {
+  fill: white;
 }
 
 .timeframe-container {
