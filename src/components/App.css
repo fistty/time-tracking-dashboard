@@ -194,7 +194,7 @@ main {
 
 .card-svg {
   position: absolute;
-  top: -0.75rem;
+  top: -0.35rem;
   right: 1.125rem;
   display: block;
   transition: all 150ms ease-out;
@@ -316,6 +316,7 @@ main {
     padding-bottom: unset;
     padding-top: 32px;
     padding-left: 30px;
+    margin-top: 45px;
   }
 
   .title-container > p {
