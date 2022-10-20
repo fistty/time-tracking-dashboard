@@ -7,7 +7,6 @@ import selfCare from "./images/icon-self-care.svg";
 
 const getSvg = (title) => {
   title = title.split(" ").join("-").toLowerCase();
-  console.log(title);
   switch (title) {
     case "work":
       return work;
