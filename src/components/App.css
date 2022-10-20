@@ -67,6 +67,7 @@ body {
 header {
   background-color: var(--Dark-blue);
   width: calc(100% - 3rem);
+  max-width: 600px;
   border-radius: 0.75rem;
 }
 
@@ -149,6 +150,7 @@ main {
 .time-card {
   background-color: var(--Light-red-work);
   width: calc(100% - 3rem);
+  max-width: 600px;
   margin: 0 auto;
   margin-top: 1.5rem;
   position: relative;
@@ -231,7 +233,7 @@ main {
 }
 
 .timeframe-container {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -244,4 +246,92 @@ main {
 
 .timeframe-prev {
   color: var(--Pale-Blue);
+}
+
+@media screen and (min-width: 1200px) {
+  #root {
+    flex-direction: row;
+    align-items: unset;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1111px;
+  }
+
+  header {
+    width: 257px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    padding-top: 2.1875rem;
+    padding-left: 1.875rem;
+    align-items: unset;
+    gap: 33px;
+    width: 257px;
+  }
+
+  .profile-img-container > img {
+    width: 5.25rem;
+    height: 5.25rem;
+  }
+
+  h1 {
+    font-size: 2.6875rem;
+  }
+
+  .period-container {
+    flex-direction: column;
+    align-items: start;
+    padding-block: 1.75rem 2.125rem;
+    justify-content: unset;
+    gap: 1.5rem;
+    width: 257px;
+  }
+
+  .period-container > button {
+    font-size: 20px;
+    transition: transform 150ms ease-out;
+  }
+
+  .period-container > button.active {
+    transform-origin: left;
+    transform: scale(1.5);
+  }
+
+  main {
+    display: grid;
+    column-gap: 28px;
+    row-gap: 30px;
+    grid-template-columns: repeat(3, 256px);
+  }
+
+  .time-card {
+    width: 100%;
+    height: 244px;
+    margin-top: unset;
+  }
+
+  .info-container {
+    height: 100%;
+    padding-bottom: unset;
+    padding-top: 32px;
+    padding-left: 30px;
+  }
+
+  .title-container > p {
+    font-size: 20px;
+  }
+
+  .timeframe-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    gap: 22px;
+    gap: 13px;
+    justify-content: unset;
+  }
+
+  .timeframe-curr {
+    font-size: 48px;
+  }
 }
