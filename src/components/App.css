@@ -335,3 +335,11 @@ main {
     font-size: 48px;
   }
 }
+
+@media screen and (min-width: 1200px) and (min-height: 700px) {
+ body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+ }
+}
